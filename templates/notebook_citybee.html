@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Namu puslapis{% endblock %}
+
+
+{% block content %}
+<embed src="{{ url_for('static', filename='files/pdf/keliones.pdf', _external=True) }}" width="50%" 
+type="application/pdf">
+
+
+
+{% endblock %}
+

@@ -1,0 +1,39 @@
+h1 {
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+body{
+    background-color:gainsboro;
+}
+
+ul {
+    list-style-type: none;
+}
+#home {
+    background-color: green;
+    color: black;
+    padding: 20px 20px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#portfolio {
+    background-color: red;
+    color: black;
+    padding: 20px 20px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#about {
+    background-color: rgb(28, 83, 105);
+    color: black;
+    padding: 20px 20px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;  
+}
