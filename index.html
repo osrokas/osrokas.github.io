@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rokas Homepage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="body">
+    <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="header-class" >
+      <div class="container-fluid" >
+        <button
+          class="navbar-toggler "
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto" id="header_nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a
+              >
+            </li> -->
+    <!-- <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li> -->
+    <!-- <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div> -->
+    <div class="page-info" style="max-width: 1200px">
+      <div class="about-headings">
+        <h1 id="rokas">Rokas</h1>
+        <h2 id="about-me">
+          <br />
+          Python developer <br />
+          ML engineer
+        </h2>
+      </div>
+      <div class="paragraphs"></div>
+      <div class="console-container">
+        <span id="text"></span>
+        <div class="console-underscore" id="console">&#95;</div>
+      </div>
+    </div>
+
+    <!-- <div class="page-info" style="max-width: 1000px" id="about">
+        <div class="container">
+          <div class="row">
+              <div class="col-sm">
+                <p style="font-weight: bold">
+                  <p style="font-weight: bold">PERSONAL INFO</p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-dark" id="myname"></li>
+                    <li class="list-group-item list-group-item-dark" id="nation"></li>
+                    <li class="list-group-item list-group-item-dark" id="hometown">
+                    <li class="list-group-item list-group-item-dark" id="now-live"></li>
+                    <li class="list-group-item list-group-item-dark" id="alma-mater"></li>
+                    <li class="list-group-item list-group-item-dark" id="workplace"></li>
+                  </ul>
+                </p>
+              </div>
+              <div class="col-sm" id="map"></div>
+          </div>
+          <div class="row">
+                        <div class="col-sm">
+              <p style="font-weight: bold">
+                <p style="font-weight: bold">HOBBIES</p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item list-group-item-dark" id="orienteering">ORIENTEERING</li>
+                  <li class="list-group-item list-group-item-dark" id="mtb">MTB</li>
+                  <li class="list-group-item list-group-item-dark" id="nordic-skiing">NORDIC-SKIING</li>
+                  <li class="list-group-item list-group-item-dark" id="science">SCIENCE</li>
+                </ul>
+              </p>
+            </div>
+            <div class="col-sm">
+              <div class="hobbie-images" id="hobbies-popup">
+            </div>
+        </div>
+
+          </div>
+      </div>
+    </div> -->
+
+    <div class="page-info" style="max-width: 1200px" id="portfolio">
+      <div class="card-columns">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Face recognition</h5>
+            <p class="card-text">
+              Face recognition app deployed on huggingface
+            </p>
+            <a
+              href="https://huggingface.co/spaces/osrokas/face-detector"
+              style="color: aliceblue; font-weight: bold; font-size: large"
+              >Go to App</a
+            >
+          </div>
+        </div>
+        <!-- <div class="card" style="width: 18rem" id="hugging_face">
+          <img
+            class="card-img-top"
+            src="assets\cards\hugging_face.png"
+            alt="Face detector"
+          />
+          <div class="card-body">
+            <p class="card-text">Face recognition app.</p>
+          </div>
+          <a href="https://huggingface.co/spaces/osrokas/face-detector" class="btn btn-primary">Go to App</a>
+        </div> -->
+        <!-- <div class="card" style="width: 18rem" , id="citybee">
+          <img
+            class="card-img-top"
+            src="assets\cards\citybee-card.png"
+            alt="Card image cap"
+            style="width: 200px"
+          />
+          <div class="card-body">
+            <p class="card-text">City bee routing project.</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <footer class="footer">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a
+            style="color: black"
+            href="https://github.com/osrokas"
+            class="nav-link px-2"
+            target="_blank"
+          >
+            <img
+              src="assets\github-logo.png"
+              alt="GitHub"
+              style="width: 30px; height: 30px"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a
+            style="color: black"
+            href="https://www.linkedin.com/in/rokas-petravicius/"
+            class="nav-link px-2"
+            target="_blank"
+          >
+            <img
+              src="assets\linkedin-logo.png"
+              alt="Linkedin"
+              style="width: 34px; height: 34px"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+  <script>
+    consoleText(
+      [
+        "passion for coding",
+        "programming",
+        "data engineering",
+        "deep learning ",
+        "machine learning",
+      ],
+      "text",
+      ["tomato", "rebeccapurple", "lightblue"]
+    );
+
+    function consoleText(words, id, colors) {
+      if (colors === undefined) colors = ["#fff"];
+      var visible = true;
+      var con = document.getElementById("console");
+      var letterCount = 1;
+      var x = 1;
+      var waiting = false;
+      var target = document.getElementById(id);
+      target.setAttribute("style", "color:" + "white");
+      window.setInterval(function () {
+        if (letterCount === 0 && waiting === false) {
+          waiting = true;
+          target.innerHTML = words[0].substring(0, letterCount);
+          window.setTimeout(function () {
+            var usedColor = colors.shift();
+            colors.push(usedColor);
+            var usedWord = words.shift();
+            words.push(usedWord);
+            x = 1;
+            letterCount += x;
+            waiting = false;
+          }, 1000);
+        } else if (letterCount === words[0].length + 1 && waiting === false) {
+          waiting = true;
+          window.setTimeout(function () {
+            x = -1;
+            letterCount += x;
+            waiting = false;
+          }, 1000);
+        } else if (waiting === false) {
+          target.innerHTML = words[0].substring(0, letterCount);
+          letterCount += x;
+        }
+      }, 120);
+      window.setInterval(function () {
+        if (visible === true) {
+          con.className = "console-underscore hidden";
+          visible = false;
+        } else {
+          con.className = "console-underscore";
+
+          visible = true;
+        }
+      }, 400);
+    }
+  </script>
+  <script>
+    var map = L.map("map").setView([55.20026531330031, 24.08964025083896], 6);
+    L.tileLayer(
+      "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}",
+      {
+        minZoom: 2,
+        maxZoom: 15,
+        attribution:
+          '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        ext: "png",
+      }
+    ).addTo(map);
+
+    var markerHometown = L.marker([55.93250971915395, 23.308168258098128]);
+    var markerCurrent = L.marker([54.69978811981273, 25.263089661926355]);
+    var markerAlma = L.marker([54.722621000566576, 25.337820680235843]);
+    var markerWork = L.marker([54.697200472683434, 25.278525291860426]);
+
+    // markerHometown._icon.style.filter = "hue-rotate(120deg)";
+    // markerCurrent._icon.style.filter = "hue-rotate(120deg)";
+    // markerAlma._icon.style.filter = "hue-rotate(120deg)";
+  </script>
+
+  <script>
+    document
+      .getElementById("hometown")
+      .addEventListener("mouseover", function () {
+        map.flyTo([55.20026531330031, 24.08964025083896], 6, {
+          animate: true,
+          pan: {
+            duration: 1,
+          },
+        });
+        map.addLayer(markerHometown);
+      });
+
+    document
+      .getElementById("hometown")
+      .addEventListener("mouseout", function () {
+        map.removeLayer(markerHometown);
+      });
+
+    document
+      .getElementById("now-live")
+      .addEventListener("mouseover", function () {
+        map.flyTo([55.20026531330031, 24.08964025083896], 6, {
+          animate: true,
+          pan: {
+            duration: 1,
+          },
+        });
+        map.addLayer(markerCurrent);
+      });
+
+    document
+      .getElementById("now-live")
+      .addEventListener("mouseout", function () {
+        map.removeLayer(markerCurrent);
+      });
+
+    document
+      .getElementById("alma-mater")
+      .addEventListener("mouseover", function () {
+        map.flyTo([54.722621000566576, 25.337820680235843], 13, {
+          animate: true,
+          pan: {
+            duration: 1,
+          },
+        });
+        map.addLayer(markerAlma);
+      });
+
+    document
+      .getElementById("alma-mater")
+      .addEventListener("mouseout", function () {
+        map.removeLayer(markerAlma);
+      });
+
+    document
+      .getElementById("workplace")
+      .addEventListener("mouseover", function () {
+        map.flyTo([54.697200472683434, 25.278525291860426], 13, {
+          animate: true,
+          pan: {
+            duration: 3,
+          },
+        });
+        map.addLayer(markerWork);
+      });
+
+    document
+      .getElementById("workplace")
+      .addEventListener("mouseout", function () {
+        map.removeLayer(markerWork);
+      });
+
+    var noRender = "<p> </p>";
+
+    //   var orienteering = '<img src="assets/hobbies/orienteering.jpg" alt="Orienteering"><p style="text-align: justify;">'
+    //   document.getElementById("orienteering").addEventListener("mouseover", function () {
+    //     document.getElementById("hobbies-popup").innerHTML = orienteering
+    //     document.getElementById("hobbies-popup").setAttribute("style","transition: 1s; margin-right:4vh; border: solid 1px;  border-color: #00000000; border-radius: 10px; box-shadow: 20px 10px #201c1c23;");
+    //   });
+    //   document.getElementById("orienteering").addEventListener("mouseout", function () {
+    //    document.getElementById("hobbies-popup").innerHTML = noRender
+    //    document.getElementById("hobbies-popup").setAttribute("style", "margin-right:4vh;  border: solid 0px;  border-color: #00000000; border-radius: 10px; box-shadow: 0px 0px #201c1c23;");
+    //   });
+
+    //   var mtb = '<img src="assets/hobbies/mtb.jpg" alt="MTB"><p style="text-align: justify;">'
+    //   document.getElementById("mtb").addEventListener("mouseover", function () {
+    //     document.getElementById("hobbies-popup").innerHTML = mtb
+    //     document.getElementById("hobbies-popup").setAttribute("style", "margin-right:4vh; border: solid 1px;  border-color: #00000000; border-radius: 10px; box-shadow: 20px 10px #201c1c23;")
+    //   });
+    //   document.getElementById("mtb").addEventListener("mouseout", function () {
+    //    document.getElementById("hobbies-popup").innerHTML = noRender
+    //     document.getElementById("hobbies-popup").setAttribute("style", "margin-right:4vh;  border: solid 0px;  border-color: #00000000; border-radius: 10px; box-shadow: 0px 0px #201c1c23;");
+
+    //   });
+
+    //   var nordicSkiing = '<img src="assets/hobbies/nordic.jpg" alt="Nordic-skiing"><p style="text-align: justify;">'
+    //   document.getElementById("nordic-skiing").addEventListener("mouseover", function () {
+    //     document.getElementById("hobbies-popup").style.transition = "all 2s";
+    //     document.getElementById("hobbies-popup").innerHTML = nordicSkiing
+    //     document.getElementById("hobbies-popup").setAttribute("style", "margin-right:4vh; border: solid 1px;  border-color: #00000000; border-radius: 10px; box-shadow: 20px 10px #201c1c23;")
+    //   });
+    //   document.getElementById("nordic-skiing").addEventListener("mouseout", function () {
+    //    document.getElementById("hobbies-popup").innerHTML = noRender
+    //   document.getElementById("hobbies-popup").setAttribute("style", "margin-right:4vh;  border: solid 0px;  border-color: #00000000; border-radius: 10px; box-shadow: 0px 0px #201c1c23;");
+
+    //   });
+
+    //   var science = '<img src="assets/hobbies/national.jpg" alt="Science"><p style="text-align: justify;">'
+    //   document.getElementById("science").addEventListener("mouseover", function () {
+    //     document.getElementById("hobbies-popup").innerHTML = science
+    //     document.getElementById("hobbies-popup").setAttribute("style", "margin-right:4vh; border: solid 1px;  border-color: #00000000; border-radius: 10px; box-shadow: 20px 10px #201c1c23;")
+    //   });
+    //   document.getElementById("science").addEventListener("mouseout", function () {
+    //    document.getElementById("hobbies-popup").innerHTML = noRender
+    //   document.getElementById("hobbies-popup").setAttribute("style", "margin-right:4vh;  border: solid 0px;  border-color: #00000000; border-radius: 10px; box-shadow: 0px 0px #201c1c23;");
+    //   });
+
+    //
+  </script>
+</html>
