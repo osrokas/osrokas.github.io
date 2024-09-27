@@ -21,7 +21,7 @@ html {
 
 #header-class {
 
-    font-size: x-large;
+    font-size: small;
     font-weight: bold;
     /* position: -webkit-sticky;
     position: sticky;
@@ -68,9 +68,19 @@ a:active {
     padding-bottom: 10px;
     justify-content: center;
     max-width: 1200px;
+    container-name: about;
     /* padding: 10px; */
 
 }
+
+/* When shrink size change font size */
+
+@media (max-width: 768px) {
+    .about-headings {
+        font-size: 50px;
+    }
+}
+
 
 #short-info {
     align-items: left;
@@ -123,11 +133,17 @@ a:active {
 
 #rokas {
     color: rgb(255, 255, 255);
-    font-size: 20px;
     font-weight: bold;
     text-align: left;
     transition: 1s;
     font-size: 4vw;
+}
+
+@media (max-width: 768px) {
+    #rokas {
+        font-size: 6vw;
+        text-align: center;
+    }
 }
 
 /* #rokas:hover {
@@ -143,8 +159,14 @@ a:active {
     text-transform: uppercase;
     transition: 1s;
     font-size: 3vw;
+}
 
+@media (max-width: 768px) {
+    #about-me {
+        font-size: 5vw;
+        text-align: center;
 
+    }
 }
 
 /* #about-me:hover {
@@ -177,6 +199,14 @@ a:active {
     top: -0.14em;
     left: 10px;
     color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .console-container {
+        font-size: 5vw;
+        margin-left: 2vw;
+    }
+    
 }
 
 #map {
