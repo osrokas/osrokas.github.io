@@ -47,37 +47,8 @@
       <div class="paragraphs"></div>
 
     </div>
-
-    <!-- TODO Fix styling for cards -->
-    <div class="page-info d-flex justify-content-center" style="max-width: 1200px;" id="portfolio" >
-      <div class="row">
-        <div class="card-columns" >
-          <div class="card" style="width: 18rem; float: none; margin: 10px auto;">
-            <div class="card-body">
-              <h5 class="card-title">Face recognition</h5>
-                <p class="card-text">
-                  Face recognition app deployed on huggingface
-                </p>
-                <a
-                  href="https://huggingface.co/spaces/osrokas/face-detector"
-                  style="color: aliceblue; font-weight: bold; font-size: large"
-                  >Go to App</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem; float: none; margin: 10px auto;">
-            <div class="card-body">
-              <h5 class="card-title">Cloud Detection</h5>
-                <p class="card-text">
-                  Cloud detection from satellite/drone images using deep learning
-                </p>
-                <a
-                  href="https://huggingface.co/spaces/osrokas/cloudiness-clasifier"
-                  style="color: aliceblue; font-weight: bold; font-size: large"
-                  >Go to App</a>
-            </div>
-            
-          </div> 
-        </div>   
+    <div class="page-info" style="max-width: 1200px;" id="portfolio">
+      <div class="d-flex flex-wrap justify-content-center" id="cards-container">
       </div>
     </div>
     <footer class="footer">
@@ -110,62 +81,7 @@
         </li>
       </ul>
     </footer>
+    <script src="cards.js"></script>
+    <script src="scripts.js"></script>
   </body>
-  <script>
-    consoleText(
-      [
-        "Machine learning practitioner",
-        "Software engineering",
-        "Data engineering",
-      ],
-      "text",
-      ["tomato", "rebeccapurple", "lightblue"]
-    );
-
-    function consoleText(words, id, colors) {
-      if (colors === undefined) colors = ["#fff"];
-      var visible = true;
-      var con = document.getElementById("console");
-      var letterCount = 1;
-      var x = 1;
-      var waiting = false;
-      var target = document.getElementById(id);
-      target.setAttribute("style", "color:" + "white");
-      window.setInterval(function () {
-        if (letterCount === 0 && waiting === false) {
-          waiting = true;
-          target.innerHTML = words[0].substring(0, letterCount);
-          window.setTimeout(function () {
-            var usedColor = colors.shift();
-            colors.push(usedColor);
-            var usedWord = words.shift();
-            words.push(usedWord);
-            x = 1;
-            letterCount += x;
-            waiting = false;
-          }, 1000);
-        } else if (letterCount === words[0].length + 1 && waiting === false) {
-          waiting = true;
-          window.setTimeout(function () {
-            x = -1;
-            letterCount += x;
-            waiting = false;
-          }, 1000);
-        } else if (waiting === false) {
-          target.innerHTML = words[0].substring(0, letterCount);
-          letterCount += x;
-        }
-      }, 120);
-      window.setInterval(function () {
-        if (visible === true) {
-          con.className = "console-underscore hidden";
-          visible = false;
-        } else {
-          con.className = "console-underscore";
-
-          visible = true;
-        }
-      }, 400);
-    }
-  </script>
 </html>
