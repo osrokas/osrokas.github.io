@@ -20,7 +20,7 @@ var cards = [
   {
     title: "Copilot Skills",
     text: "A collection of skills for GitHub Copilot",
-    link: "git@github.com:osrokas/copilot-skills.git",
+    link: "https://github.com/osrokas/copilot-skills",
     linkText: "Go to Repo",
   }
 ];
