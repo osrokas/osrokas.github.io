@@ -16,5 +16,11 @@ var cards = [
     text: "Links to useful resources related to software engineering, machine learning and data engineering",
     link: "https://osrokas.github.io/useful-links/",
     linkText: "Go to Useful Links",
+  },
+  {
+    title: "Copilot Skills",
+    text: "A collection of skills for GitHub Copilot",
+    link: "git@github.com:osrokas/copilot-skills.git",
+    linkText: "Go to Repo",
   }
 ];
